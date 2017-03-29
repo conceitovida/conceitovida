@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "bourbon": "^4.3.3",
+    "bourbon-bitters": "^1.2.1",
+    "normalize-scss": "^6.0.0"
+  }
+}
