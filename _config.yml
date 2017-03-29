@@ -1,0 +1,15 @@
+title: Conceito Vida
+tagline: Cirurgia Plástica & Longevidade
+url: "http://localhost:4000"
+baseurl: ""
+
+exclude: 
+  - css/app.css.map
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+sass:
+  sass_dir: css
+  style: compressed

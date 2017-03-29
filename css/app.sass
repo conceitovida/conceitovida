@@ -1,6 +1,5 @@
-@import '../node_modules/normalize-scss/sass/normalize'
-@import '../node_modules/bourbon/app/assets/stylesheets/bourbon'
-@import '../node_modules/bourbon-bitters/app/assets/stylesheets/bitters'
+---
+---
 
 $desktop              : 640px
 $background-color     : rgb(139, 40, 144)
@@ -8,7 +7,7 @@ $text-color           : white
 
 body, h1, h2, address
   color: $text-color
-  font-family: 'Source Sans Pro', $helvetica
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif
   font-size: 18px
   font-weight: 400
 
@@ -96,6 +95,7 @@ ul
   padding: 3rem 0
 
 li
+  list-style-type: none
   margin-top: 2rem
 
   &:first-child
