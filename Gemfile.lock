@@ -19,8 +19,6 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
-    jekyll-sitemap (1.0.0)
-      jekyll (~> 3.3)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     jgd (1.8)
@@ -48,7 +46,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.4.3)
-  jekyll-sitemap (= 1.0.0)
   jgd (= 1.8)
   sass (= 3.4.23)
 

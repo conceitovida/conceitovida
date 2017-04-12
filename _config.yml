@@ -3,9 +3,6 @@ tagline: Cirurgia Plástica & Longevidade
 url: "http://localhost:4000"
 baseurl: ""
 
-gems:
-  - jekyll-sitemap
-
 exclude: 
   - css/app.css.map
   - Gemfile
