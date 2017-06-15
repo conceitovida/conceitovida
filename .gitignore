@@ -1,2 +1,13 @@
+# rbenv
 .ruby-version
+
+# jekyll
 _site/
+
+# bourbon family
+_sass/bourbon/
+_sass/neat/
+_sass/base/
+
+# sass
+.sass-cache/
