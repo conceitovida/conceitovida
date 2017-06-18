@@ -4,31 +4,24 @@
   </h1>
 
   <address class="desktop">
-    {% include header/address.html %}
+    {% include _address.html %}
   </address>
 
   <nav class="social">
-    <ul>
-      <li>
-        <a href="#facebook">{% include svg/facebook.svg %}</a>
-      </li>
-      <li>
-        <a href="#instagram">{% include svg/instagram.svg %}</a>
-      </li>
-    </ul>
+    {% include _social.html %}
   </nav>
 
   <nav class="menu mobile">
     <a href="#menu">{% include svg/menu.svg %}</a>
-    {% include header/menu.html %}
+    {% include _menu.html %}
   </nav>
 
   <address class="mobile">
-    {% include header/address.html %}
+    {% include _address.html %}
   </address>
 
   <nav class="menu desktop">
-    {% include header/menu.html %}
+    {% include _menu.html %}
   </nav>
 
 </header>
