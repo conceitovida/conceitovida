@@ -1,0 +1,41 @@
+footer
+  text-align: center
+
+  address, nav, p
+    +grid-column(6, $mobile)
+
+    +grid-media($desktop)
+      +grid-column(10, $desktop)
+      +grid-shift(1, $desktop)
+
+  address
+    margin-bottom: 1rem
+
+  li
+    display: inline-block
+    margin-left: 2rem
+
+    &:first-child
+      margin-left: 0
+
+  svg
+    fill: white
+    width: 2.5rem
+    height: 2.5rem
+
+  a, a:hover
+    color: white
+    text-decoration: none
+
+  .contact
+    +clearfix
+    background-color: $highlight_color
+    color: white
+    margin-bottom: 1rem
+    padding: 1rem 0
+
+  .cremesp
+    color: $highlight_color
+
+  .copyright
+    color: gray
