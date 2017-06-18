@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+
+class Bourbon
+
+  attr_reader :name, :binary, :directory, :install_path
+
+  def initialize(name)
+    @name         = name
+    @binary       = name.downcase
+    @directory    = @binary == 'bitters' ? 'base' : @binary
+    @install_path = File.join('_sass', @directory)
+  end
+
+end
+
+
+puts "\n==> Installing gems"
+puts `bundle install`
+
+packages = ['Bourbon', 'Neat', 'Bitters'].map { |pkg| Bourbon.new pkg }
+
+for package in packages
+
+  puts "\n==> Installing #{package.name}"
+
+  if Dir.exists? package.install_path
+    puts "Removing old #{package.name}"
+    FileUtils.rm_rf package.install_path
+  end
+
+  puts `bundle exec #{package.binary} install`
+  puts "Moving #{package.directory} to #{package.install_path}"
+  FileUtils.mv(package.directory, package.install_path)
+
+end
