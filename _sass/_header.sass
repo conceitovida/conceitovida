@@ -1,0 +1,139 @@
+
+header
+  +grid-container($mobile)
+  margin-top: .5rem
+
+  +grid-media($desktop)
+    +grid-container($desktop)
+    margin-top: 1rem
+
+  h1
+    +grid-column(3, $mobile)
+    margin-bottom: .5rem
+
+    +grid-media($desktop)
+      +grid-column(4, $desktop)
+      +grid-shift(1, $desktop)
+      margin-bottom: 1rem
+
+    img
+      height: 2.5rem
+
+      +grid-media($desktop)
+        height: 4rem
+
+  address
+    font-size: .8rem
+    line-height: 1rem
+    font-style: normal
+
+    a, a:hover
+      color: white
+      text-decoration: none
+
+    &.mobile
+      background: $highlight_color
+      background: -moz-linear-gradient(top, shade($highlight_color, 40%) 0%, $highlight_color 3%, $highlight_color 100%)
+      background: -webkit-linear-gradient(top, shade($highlight_color, 40%) 0%, $highlight_color 3%, $highlight_color 100%)
+      background: linear-gradient(to bottom, shade($highlight_color, 40%) 0%, $highlight_color 3%, $highlight_color 100%)
+      clear: both
+      color: white
+      margin: 0
+      padding: .5rem
+      text-align: center
+      width: 100%
+
+      +grid-media($desktop)
+        display: none
+
+    &.desktop
+      display: none
+
+      +grid-media($desktop)
+        +grid-column(5, $desktop)
+        +grid-shift(1, $desktop)
+        background: transparent
+        color: $highlight_color
+        display: block
+        padding: 0
+        text-align: right
+
+        a, a:hover
+          color: $highlight_color
+
+  nav
+
+    &.social
+      +grid-column(2, $mobile)
+
+      +grid-media($desktop)
+        +grid-column(1, $desktop)
+        +grid-shift(1, $desktop)
+
+      ul
+        +grid-collapse($social-media-mobile)
+
+        +grid-media($desktop)
+          +grid-collapse($social-media-desktop)
+
+      li
+        +grid-column(1, $social-media-mobile)
+        text-align: right
+
+        +grid-media($desktop)
+          +grid-column(1, $social-media-desktop)
+          float: none
+
+    &.menu.mobile
+      +grid-column(1, $mobile)
+      text-align: right
+
+      ul
+        display: none
+
+      ul, li
+        margin: 0
+        padding: 0
+
+      +grid-media($desktop)
+        display: none
+
+    &.menu.desktop
+      display: none
+
+      +grid-media($desktop)
+        background-color: $highlight_color
+        clear: both
+        display: block
+        height: 3rem
+        margin: 0
+        position: relative
+        width: 100%
+
+        ul
+          +grid-column(10)
+          +grid-shift(1)
+          text-align: center
+
+        li
+          display: inline-block
+          font-size: 1rem
+          line-height: 3rem
+          margin-left: 2rem
+
+          &:first-child
+            margin-left: 0
+
+        a, a:hover
+          color: white
+          text-decoration: none
+          text-transform: uppercase
+
+  svg
+    fill: $highlight_color
+    height: 2.5rem
+    width: 2.5rem
+
+    +grid-media($desktop)
+      width: 1.75rem
+      height: 1.75rem
