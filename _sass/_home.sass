@@ -1,0 +1,40 @@
+main.home
+  +grid-container($mobile)
+  line-height: 1.62rem
+
+  +grid-media($desktop)
+    +grid-container($desktop)
+
+  ul
+    +grid-column(6, $mobile)
+    border-bottom: .15rem solid $highlight_color
+    padding: 1rem 0
+    text-align: center
+    text-transform: uppercase
+
+    +grid-media($desktop)
+      +grid-column(4, $desktop)
+      +grid-shift(1)
+      border-bottom: 0
+      border-right: .15rem solid $highlight_color
+      margin-bottom: 3rem
+      margin-top: 3rem
+      padding: 0 .5rem 0 0
+      text-align: right
+
+  div
+    +grid-column(6, $mobile)
+    align-items: center
+    display: flex
+    height: 100%
+
+    +grid-media($desktop)
+      +grid-column(5, $desktop)
+      +grid-shift(2)
+
+    p
+      padding: 1rem 0
+      +grid-media($desktop)
+        font-size: 1.2rem
+        line-height: 2rem
+        padding: 3rem 0
