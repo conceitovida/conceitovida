@@ -1,9 +1,13 @@
-main.home
+main.home,
+#banners,
+#team,
+#credenctials
   +grid-container($mobile)
-  line-height: 1.62rem
-
   +grid-media($desktop)
     +grid-container($desktop)
+
+main.home
+  line-height: 1.62rem
 
   ul
     +grid-column(6, $mobile)
@@ -38,3 +42,11 @@ main.home
         font-size: 1.2rem
         line-height: 2rem
         padding: 3rem 0
+
+#banners li
+  +grid-column(4, $mobile)
+  +grid-shift(1, $mobile)
+
+  +grid-media($desktop)
+    +grid-column(4, $desktop)
+    +grid-shift(0, $desktop)
