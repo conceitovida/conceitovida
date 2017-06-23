@@ -50,3 +50,43 @@ main.home
   +grid-media($desktop)
     +grid-column(4, $desktop)
     +grid-shift(0, $desktop)
+
+#team
+  border-color: $highlight_color
+  border-style: solid
+  border-width: .2rem 0
+  margin: 1rem 0
+  padding: 1rem 0
+
+  +grid-media($desktop)
+    margin: 2rem 0
+    padding: 2rem 0
+
+  ul
+    +grid-media($desktop)
+      +grid-column(10, $desktop)
+      +grid-shift(1, $desktop)
+      display: flex
+      justify-content: space-between
+
+  li
+    +grid-column(4, $mobile)
+    +grid-shift(1, $mobile)
+    margin-top: 1rem
+
+    &:first-child
+      margin-top: 0
+
+    +grid-media($desktop)
+      width: 25%
+      margin: 0
+      float: none
+      position: initial
+
+  .name, .crm
+    display: block
+    font-size: 1rem
+    font-weight: bold
+
+  .crm
+    font-size: .7rem
