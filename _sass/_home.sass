@@ -90,3 +90,15 @@ main.home
 
   .crm
     font-size: .7rem
+
+#credentials
+  +clearfix
+
+  li
+    +grid-column(2, $mobile)
+    +grid-media($desktop)
+      +grid-column(2, $desktop)
+      +grid-shift(3, $desktop)
+
+  img
+    width: 100%
