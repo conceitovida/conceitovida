@@ -1,0 +1,60 @@
+#carousel
+
+  .slick-list
+    max-height: 75vh
+
+    img
+      +grid-media($desktop)
+        position: relative
+        z-index: -1
+        top: 40%
+        left: 50%
+        width: 100%
+        transform: translate(-50%, -35%)
+
+  .slick-dots
+    bottom: 1rem
+    position: absolute
+    text-align: center
+    width: 100%
+
+    li
+      display: inline
+      margin-left: 0.62rem
+
+      button
+        background: transparent
+        border-radius: 50%
+        border: .15rem solid $highlight_color
+        color: transparent
+        font-size: 0
+        height: 1rem
+        padding: 0
+        width: 1rem
+
+      &:first-child
+        margin-left: 0
+
+      &.slick-active button
+        background: $highlight_color
+
+  .slick-next,
+  .slick-prev
+    background: rgba(255, 255, 255, .5)
+    border-radius: 0
+    color: $highlight_color
+    font-weight: bold
+    padding: 2rem .25rem
+    position: absolute
+    top: calc(50% - 2.5rem)
+    z-index: 1
+
+    +grid-media($desktop)
+      padding: 3rem .5rem
+      top: calc(50% - 3.5rem)
+
+  .slick-prev
+    left: .5rem
+
+  .slick-next
+    right: .5rem
