@@ -1,0 +1,70 @@
+---
+layout: site
+title: Contato
+stylesheet: home
+description: "Contato - Clínica Conceito Vida — Cirurgia Plástica & Longevidade — Campinas, SP, Brasil"
+keywords: "contato, email, telefone, endereço, horário de funcionamento, clínica conceito vida, conceito vida, conceito vida campinas, vanessa brandalise, mauricio serafim, paula postali, dra. vanessa brandalise, dr. mauricio serafim, dra. paula postali, vanessa brandalise cirurgia plastica, vanessa brandalise longevidade, mauricio serafim cirurgia plastica, mauricio serafim longevidade, paula postali drenagem, longevidade conceito vida, drenagem conceito vida, clinica cirurgia plastica campinas, paula postali fisioterapia, clinica drenagem campinas, clinica drenagem linfatica campinas, clinica depilação laser campinas"
+---
+
+<main class="contact">
+  <h1>Contato</h1>
+  <img src="/imgs/contact-320.png"
+       srcset="/imgs/contact-320.png 320w,
+               /imgs/contact-640.png 640w,
+               /imgs/contact-1024.png 1024w,
+               /imgs/contact-2048.png 2048w,
+               /imgs/contact-4096.png 4096w"
+       sizes="(min-width: 320px) 640px, 1024px, 2048px, 4096px"
+       alt="Contato" />
+  <div class="contact-details">
+
+    <div id="contact-address">
+      <h2>Conceito Vida</h2>
+      <address>{{ site.contact.address1 }}<br>{{ site.contact.address2 }}</address>
+
+      <p>
+        <a href="tel:{{ site.contact.phone }}">{{ site.contact.phone_for_humans }}</a></br>
+        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+      </p>
+
+      <p class="opening-hours">
+        Horário de funcionamento<br>
+        De segunda à sexta, das 8h às 17h
+      </p>
+
+      <div class="fb-page-container">
+        <div class="fb-page" data-href="https://www.facebook.com/conceitovidacampinas" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/conceitovidacampinas" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/conceitovidacampinas">{{ site.title }}</a>
+          </blockquote>
+      </div>
+    </div><!-- end .fb-page-container -->
+
+    </div><!-- end #contact-address -->
+
+    <div id="contact-map"><div id="gmaps"></div></div>
+    <script>
+      function initMap() {
+        var position = {lat: -22.9007941, lng: -47.0399903};
+        var canvas = document.getElementById('gmaps');
+        var map = new google.maps.Map(canvas, {zoom: 13, center: position });
+        var marker = new google.maps.Marker({position: position, map: map, content: 'XPTO' });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google-maps-api }}&callback=initMap"></script>
+
+  </div><!-- end #contact-details -->
+</main>
+
+<!-- Facebook Page Plugin -->
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+

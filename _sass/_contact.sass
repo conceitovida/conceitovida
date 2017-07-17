@@ -1,0 +1,89 @@
+main.contact
+  +clearfix
+  background: black
+  color: white
+  padding: 2rem 0 1rem 0
+
+  +grid-media($desktop)
+    padding: 2rem 0
+
+  h1
+    font-size: 2.5rem
+    font-weight: normal
+    display: none
+    text-align: center
+    text-transform: uppercase
+
+    +grid-media($desktop)
+      display: block
+
+  img
+    width: 100%
+
+#contact-details
+  +grid-container($mobile)
+
+  +grid-media($desktop)
+    +grid-container($desktop)
+
+#contact-address
+  +grid-column(6, $mobile)
+  text-align: center
+
+  +grid-media($desktop)
+    +grid-column(4, $desktop)
+    +grid-shift(1, $desktop)
+    text-align: right
+    text-transform: uppercase
+
+  a
+    color: white
+    text-decoration: none
+
+    &:hover
+      color: white
+
+  h2
+    +grid-media($desktop)
+      display: none
+
+  p
+    font-weight: bold
+
+    &.opening-hours
+      font-weight: normal
+
+    +grid-media($desktop)
+      font-weight: normal
+
+      &.opening-hours
+        font-weight: normal
+
+  address
+    margin-bottom: .75rem
+
+  .fb-page-container
+    margin-bottom: 1rem
+    margin-top: 2rem
+
+    +grid-media($desktop)
+      +grid-collapse($facebook-page)
+      margin-top: 2rem
+      margin-bottom: 2rem
+
+  .fb-page
+    +grid-media($desktop)
+      +grid-column(2, $facebook-page)
+      +grid-shift(2, $facebook-page)
+
+#contact-map
+  display: none
+
+  +grid-media($desktop)
+    +grid-column(6, $desktop)
+    +grid-shift(1, $desktop)
+    display: block
+    position: relative
+
+#gmaps
+  min-height: 27rem
