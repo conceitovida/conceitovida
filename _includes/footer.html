@@ -3,7 +3,10 @@
   <div class="contact">
     <div class="wrapper">
       <address>
-        {% include _address.html %}
+        <h3>Conceito Vida</h3>
+        {{ site.contact.address1 }} - {{ site.contact.address2 }}<br>
+        <a href="tel:{{ site.contact.phone }}">{{ site.contact.phone_for_humans }}</a></br>
+        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
       </address>
       <nav>
         {% include _social.html %}

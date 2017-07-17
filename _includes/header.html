@@ -4,7 +4,10 @@
   </h1>
 
   <address class="desktop">
-    {% include _address.html %}
+    {{ site.contact.address1 }}<br>
+    {{ site.contact.address2 }}<br>
+    <a href="tel:{{ site.contact.phone }}">{{ site.contact.phone_for_humans }}</a></br>
+    <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
   </address>
 
   <nav class="social">
@@ -17,7 +20,10 @@
   </nav>
 
   <address class="mobile">
-    {% include _address.html %}
+    {{ site.contact.address1 }}<br>
+    {{ site.contact.address2 }}<br>
+    <a href="tel:{{ site.contact.phone }}">{{ site.contact.phone_for_humans }}</a></br>
+    <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
   </address>
 
   <nav class="menu desktop">

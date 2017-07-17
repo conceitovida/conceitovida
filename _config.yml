@@ -3,7 +3,7 @@ tagline: Cirurgia Plástica & Longevidade
 url: "http://localhost:4000"
 baseurl: ""
 
-exclude: 
+exclude:
   - css/app.css.map
   - Gemfile
   - Gemfile.lock
@@ -14,3 +14,10 @@ exclude:
 sass:
   sass_dir: css
   style: compressed
+
+contact:
+  address1: Av. Doutor Hermas Braga, 396
+  address2: Nova Campinas - Campinas - SP
+  phone: +551932540492
+  phone_for_humans: (19) 3254.0492
+  email: contato@conceitovida.com.br
