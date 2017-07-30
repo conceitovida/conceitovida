@@ -1,0 +1,104 @@
+---
+layout: site
+title: Serviços
+stylesheet: home
+description: "Serviços - Clínica Conceito Vida — Cirurgia Plástica & Longevidade — Campinas, SP, Brasil"
+keywords: "clínica conceito vida, conceito vida, conceito vida campinas, vanessa brandalise, mauricio serafim, paula postali, dra. vanessa brandalise, dr. mauricio serafim, dra. paula postali, vanessa brandalise cirurgia plastica, vanessa brandalise longevidade, mauricio serafim cirurgia plastica, mauricio serafim longevidade, paula postali drenagem, longevidade conceito vida, drenagem conceito vida, clinica cirurgia plastica campinas, paula postali fisioterapia, clinica drenagem campinas, clinica drenagem linfatica campinas, clinica depilação laser campinas"
+services:
+  - title: "Cirurgias para homens"
+    cover: "/imgs/servicos_cirurgias_para_homens.jpg"
+    description: "Cada vez mais o sexo masculino tem se preocupado com a saúde e qualidade de vida, além de mostrar crescente interesse na cirurgia plástica e tratamentos estéticos."
+  - title: "Contorno corporal"
+    cover: "/imgs/servicos_contorno_corporal.jpg"
+    items:
+      - "Body lifting"
+      - "Abdominoplastia"
+      - "Lifting de braço"
+      - "Lifting de coxa"
+      - "Subsição para celulite"
+      - "Lipoaspiração"
+  - title: "Cirurgia facial"
+    cover: "/imgs/servicos_cirurgia_facial.jpg"
+    items:
+      - "Definição de mandíbula"
+      - "Lipo de papada"
+      - "Pálpebra"
+      - "Implantes faciais"
+      - "Nariz, queixo & orelha"
+      - "Lifting facial"
+      - "Lifting de testa"
+      - "Tumores cutâneos"
+  - title: "Mama"
+    cover: "/imgs/servicos_mama.jpg"
+    items:
+      - "Ginecomastia"
+      - "Mampolastia de aumento"
+      - "Mamoplastia redutora"
+      - "Lifting de mama"
+  - title: "Procedimentos minimamente invasivos"
+    cover: "/imgs/servicos_minimamente_invasivos.jpg"
+    items:
+      - "Dermoabrasão"
+      - "Laser"
+      - "Peeling químico"
+      - "Plasma rico em plaquetas"
+      - "Preenchimento cutâneo"
+      - "Toxina butolínica"
+      - "Cosmiatria facial"
+      - "Mesoterapia"
+  - title: "Procedimentos estéticos"
+    cover: "/imgs/servicos_procedimentos_esteticos.jpg"
+    items:
+      - "Depilação a laser"
+      - "Radiofrequência"
+      - "Manthus"
+      - "Laser/led"
+      - "Luz pulsada"
+      - "Ultracavitação"
+      - "Drenagem linfática"
+  - title: "Pós-operatório"
+    cover: "/imgs/servicos_pos_operatorio.jpg"
+    description: "Acompanhamento profissional buscando um processo de cicatrização mais rápido e eficaz, menos doloroso, e o resultado ainda mais natural."
+  - title: "Células-tronco"
+    cover: "/imgs/servicos_celulas_tronco.jpg"
+    description: "Coleta, armazenamento e utilização de células-tronco."
+  - title: "Emagrecimento"
+    cover: "/imgs/servicos_emagrecimento.jpg"
+    description: "Emagrecimento saudável através de diversas técnicas combinadas e acompanhamento profissional."
+---
+
+<main class="services">
+    <h1>Serviços</h1>
+    <div class="text">
+      <p>A Conceito Vida oferece diversas cirurgias plásticas, procedimentos estéticos e tratamentos, relacionados abaixo.</p>
+      <p>Antes de se decidir sobre o tratamento desejado, marque uma consulta para tirar todas as dúvidas. A sua decisão sobre uma cirurgia ou procedimento é pessoal, considerando os fatores de risco e os benefícios de atingir os objetivos desejados. É dever do profissional fornecer informações sobre tratamentos e cirurgias, descrever a abordagem e falar sobre os riscos envolvidos.</p>
+      <p>O sucesso e a segurança da sua cirurgia dependem da sua sinceridade sobre seu estilo de vida, hábitos, receios e expectativas. Na Conceito Vida acreditamos que a confiança entre médico e paciente é um dos pontos mais importantes para excelência no atendimento em toda a sua duração.</p>
+    </div><!-- end .text -->
+
+    {% for service in page.services %}
+      <div class="card" data-cover="{{ service.cover }}">
+
+        <div class="front">
+          <h2>
+            <div>
+              <span>
+                {{ service.title }}
+              </span>
+            </div>
+          </h2>
+          <p>Leia mais</p>
+        </div>
+
+        <div class="back">
+          {% if service.description %}<p>{{ service.description }}</p>{% endif %}
+          {% if service.items %}
+            <ul>
+              {%  for item in service.items %}<li>{{ item }}</li>{% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+
+      </div><!-- end .card -->
+    {% endfor %}
+
+  </main>

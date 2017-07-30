@@ -7,6 +7,9 @@ $(document).ready(function(){
   // carousel
   $('#carousel').slick(carouselSettings);
 
+  // services
+  $('.card').each(shapeCard).flip();
+
 });
 
 var createMobileMenu = function () {
@@ -26,4 +29,13 @@ var carouselSettings = {
   'dots': true,
   'nextArrow': '<button type="button" class="slick-next">&gt;</button>',
   'prevArrow': '<button type="button" class="slick-prev">&lt;</button>'
+};
+
+var shapeCard = function () {
+  var cardWidth = $(this).width() + 'px';
+  $(this).height($(this).width());
+  $(this).resize(shapeCard);
+
+  var cssBg = 'url(' + this.dataset.cover + ')';
+  $(this).find('.front').css('background-image', cssBg);
 };
