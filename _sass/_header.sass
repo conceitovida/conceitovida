@@ -1,4 +1,3 @@
-
 header
   margin-top: .5rem
 
@@ -21,41 +20,21 @@ header
         height: 4rem
 
   address
-    line-height: 1rem
+    display: none
 
-    a, a:hover
-      color: white
-      text-decoration: none
+    +grid-media($desktop)
+      +grid-column(5, $desktop)
+      +grid-shift(1, $desktop)
+      background: transparent
+      color: $highlight_color
+      display: block
+      line-height: 1rem
+      padding: 0
+      text-align: right
 
-    &.mobile
-      background: $highlight_color
-      background: -moz-linear-gradient(top, shade($highlight_color, 40%) 0%, $highlight_color 3%, $highlight_color 100%)
-      background: -webkit-linear-gradient(top, shade($highlight_color, 40%) 0%, $highlight_color 3%, $highlight_color 100%)
-      background: linear-gradient(to bottom, shade($highlight_color, 40%) 0%, $highlight_color 3%, $highlight_color 100%)
-      clear: both
-      color: white
-      margin: 0
-      padding: .5rem
-      text-align: center
-      width: 100%
-
-      +grid-media($desktop)
-        display: none
-
-    &.desktop
-      display: none
-
-      +grid-media($desktop)
-        +grid-column(5, $desktop)
-        +grid-shift(1, $desktop)
-        background: transparent
+      a, a:hover
         color: $highlight_color
-        display: block
-        padding: 0
-        text-align: right
-
-        a, a:hover
-          color: $highlight_color
+        text-decoration: none
 
   nav
 
@@ -80,7 +59,7 @@ header
           +grid-column(1, $social-media-desktop)
           float: none
 
-    &.menu.mobile
+    &.menu
       +grid-column(1, $mobile)
       text-align: right
 
@@ -92,12 +71,6 @@ header
         padding: 0
 
       +grid-media($desktop)
-        display: none
-
-    &.menu.desktop
-      display: none
-
-      +grid-media($desktop)
         background-color: $highlight_color
         clear: both
         display: block
@@ -106,9 +79,13 @@ header
         position: relative
         width: 100%
 
+        .hamburguer
+          display: none
+
         ul
           +grid-column(10)
           +grid-shift(1)
+          display: block
           text-align: center
 
         li

@@ -5,7 +5,7 @@
     </a>
   </h1>
 
-  <address class="desktop">
+  <address>
     {{ site.contact.address1 }}<br>
     {{ site.contact.address2 }}<br>
     <a href="tel:{{ site.contact.phone }}">{{ site.contact.phone_for_humans }}</a></br>
@@ -16,19 +16,8 @@
     {% include _social.html %}
   </nav>
 
-  <nav class="menu mobile">
-    <a href="#menu">{% include svg/menu.svg %}</a>
-    {% include _menu.html %}
-  </nav>
-
-  <address class="mobile">
-    {{ site.contact.address1 }}<br>
-    {{ site.contact.address2 }}<br>
-    <a href="tel:{{ site.contact.phone }}">{{ site.contact.phone_for_humans }}</a></br>
-    <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
-  </address>
-
-  <nav class="menu desktop">
+  <nav class="menu">
+    <a class="hamburger" href="#menu">{% include svg/menu.svg %}</a>
     {% include _menu.html %}
   </nav>
 
