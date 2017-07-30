@@ -1,8 +1,16 @@
 header
-  margin-top: .5rem
+  background: white
+  box-shadow: 0 0 .25rem black
+  left: 0
+  padding-top: .5rem
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 10
 
   +grid-media($desktop)
-    margin-top: 1rem
+    box-shadow: 0 0 .5rem black
+    padding-top: 1rem
 
   h1
     +grid-column(3, $mobile)
