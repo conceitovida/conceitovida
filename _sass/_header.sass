@@ -48,14 +48,12 @@ header
 
     &.social
       +grid-column(2, $mobile)
-
       +grid-media($desktop)
         +grid-column(1, $desktop)
         +grid-shift(1, $desktop)
 
       ul
         +grid-collapse($social-media-mobile)
-
         +grid-media($desktop)
           +grid-collapse($social-media-desktop)
 
@@ -117,3 +115,54 @@ header
     +grid-media($desktop)
       width: 1.75rem
       height: 1.75rem
+
+nav.menu.mobile
+
+  ul
+    animation-duration: 0.6s
+    animation-name: hide-mobile-menu
+    animation-timing-function: ease-in
+    background: $highlight_color
+    border-radius: 0 0 .5rem .5rem
+    box-shadow: 0 0 .25rem gray
+    display: block
+    left: 1rem
+    padding: 2rem 0
+    position: fixed
+    top: -100vh
+    visibility: hidden
+    width: calc(100% - 2rem)
+    z-index: 5
+
+    &.animated
+      visibility: visible
+
+  &.active ul
+    animation-name: show-mobile-menu
+    animation-timing-function: ease-out
+    top: 3.5rem
+
+  li
+    font-size: 1.2rem
+    margin-bottom: .8rem
+    text-align: center
+    text-transform: uppercase
+
+  a, a:hover
+    color: white
+    text-decoration: none
+
+  @grid-media($desktop)
+    display: none
+
+@keyframes show-mobile-menu
+  0%
+    top: -100vh
+  100%
+    top: 3.5rem
+
+@keyframes hide-mobile-menu
+  0%
+    top: 3.5rem
+  100%
+    top: -100vh

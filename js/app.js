@@ -7,6 +7,10 @@ $(document).ready(function(){
   fixHomeMain();
   $(window).resize(fixHomeMain);
 
+  // menu
+  createMobileMenu()
+  $('.hamburger').click(hamburgerMenu);
+
 });
 
 var carouselSettings = {
@@ -28,4 +32,17 @@ var fixHomeMain = function () {
     }
 
   }
+};
+
+var createMobileMenu = function () {
+  var content = $('nav.menu ul').clone();
+  var mobileMenu = document.createElement('nav');
+  $(mobileMenu).addClass('menu mobile').html(content);
+  $('header').after(mobileMenu);
+};
+
+var hamburgerMenu = function () {
+    var mobileMenu = $('nav.menu.mobile');
+    mobileMenu.toggleClass('active');
+    mobileMenu.find('ul').addClass('animated');
 };
