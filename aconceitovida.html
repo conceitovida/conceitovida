@@ -1,0 +1,77 @@
+---
+layout: site
+title: A Conceito Vida
+stylesheet: home
+description: "Clínica Conceito Vida — Cirurgia Plástica & Longevidade — Campinas, SP, Brasil"
+keywords: "clínica conceito vida, conceito vida, conceito vida campinas, vanessa brandalise, mauricio serafim, paula postali, dra. vanessa brandalise, dr. mauricio serafim, dra. paula postali, vanessa brandalise cirurgia plastica, vanessa brandalise longevidade, mauricio serafim cirurgia plastica, mauricio serafim longevidade, paula postali drenagem, longevidade conceito vida, drenagem conceito vida, clinica cirurgia plastica campinas, paula postali fisioterapia, clinica drenagem campinas, clinica drenagem linfatica campinas, clinica depilação laser campinas"
+captions:
+  - Fachada da clínica
+  - Close da fachada
+  - Recepção
+  - Recepção
+  - Sala de espera
+  - Sala de procedimentos
+  - Sala de biopedância
+  - Sala de atendimento
+  - Sala de procedimentos estéticos
+  - Sala de espera
+---
+
+<div id="aboutCarousel">
+  {% for caption in page.captions %}
+    <div>
+      <img src="/imgs/about_{{ forloop.index }}-320.jpg"
+      srcset="/imgs/about_{{ forloop.index }}-320.jpg 320w,
+      /imgs/about_{{ forloop.index }}-640.jpg 640w,
+      /imgs/about_{{ forloop.index }}-1024.jpg 1024w,
+      /imgs/about_{{ forloop.index }}-2048.jpg 2048w,
+      /imgs/about_{{ forloop.index }}-4096.jpg 4096w"
+      sizes="(min-width: 320px) 640px, 1024px, 2048px, 4096px"
+      alt="{{ caption }}" />
+    </div>
+  {% endfor %}
+</div><!-- end #aboutCarousel -->
+
+<div id="aboutCarouselMenu">
+  {% for image in page.captions %}
+    <div>
+      <img src="/imgs/about_{{ forloop.index }}-320.jpg"
+      srcset="/imgs/about_{{ forloop.index }}-320.jpg 320w,
+      /imgs/about_{{ forloop.index }}-640.jpg 640w,
+      /imgs/about_{{ forloop.index }}-1024.jpg 1024w"
+      sizes="(min-width: 320px) 320px, 640px"
+      alt="{{ caption }}" />
+    </div>
+  {% endfor %}
+</div><!-- end #aboutCarouselMenu -->
+
+<main class="about">
+
+  <div class="about-outer-wrapper">
+    <div class="about-inner-wrapper">
+        <h1>Quem somos</h1>
+        <p>Inaugurada em 2015, a Conceito Vida é mais do que apenas uma clínica. É um espaço que tem como principal objetivo amparar o processo de envelhecimento de seus pacientes. Esse conceito vai além da aparência física: é a busca pela <strong>longevidade</strong> e <strong>qualidade de vida</strong>. Sempre em busca de resultados que superem as expectativas do paciente.</p>
+        <p>Além de oferecer diversos procedimentos estéticos e cirurgias plásticas, a Conceito e Vida trabalha com tratamentos de <strong>emagrecimento</strong>, <strong>medicina ortomolecular</strong> e <strong>células-tronco</strong> - com médicos renomados e especializados nas áreas.</p>
+        <p>Existe também um grande cuidado com o <strong>pós-operatório</strong>, tornando o processo de cicatrização mais rápido e eficaz, menos doloroso, e o resultado ainda mais natural.</p>
+    </div><!-- end .about-inner-wrapper -->
+  </div><!-- end .about-outer-wrapper -->
+
+  <div class="about-outer-wrapper">
+    <div class="about-inner-wrapper">
+      <div class="mission-wrapper">
+        <div class="mission-content">
+          <h2>Missão</h2>
+          <p>Garantir um atendimento diferenciado, promover longevidade e qualidade de vida, oferecer cirurgias plásticas e tratamentos estéticos de qualidade que respeitam a individualidade.</p>
+          <h2>Visão</h2>
+          <p>Ser um centro de referência em Longevidade, Qualidade de Vida e Inovação na Área Estética.</p>
+          <h2>Valores</h2>
+          <p>Ética: a prática da medicina seguindo valores morais.</p>
+          <p>Humanização: respeito aos pacientes, criação de um relacionamento solidário e diferenciado.</p>
+          <p>Trabalho em equipe: profissionais que trabalham juntos, somando cuidados e dedicação.</p>
+          <p>Qualidade: trazer satisfação das necessidades e superar expectativas dos pacientes.</p>
+        </div><!-- end .mission-content -->
+      </div><!-- end .mission-wrapper -->
+    </div><!-- end .about-inner-wrapper -->
+  </div><!-- end .about-outer-wrapper -->
+
+</main>

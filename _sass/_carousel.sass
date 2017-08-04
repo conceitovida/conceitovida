@@ -1,4 +1,4 @@
-#carousel
+#homeCarousel
 
   .slick-list
     max-height: 75vh
@@ -38,6 +38,14 @@
       &.slick-active button
         background: $highlight_color
 
+#homeCarousel,
+#aboutCarousel
+  +grid-container($mobile)
+  padding-top: 2rem
+
+  +grid-media($desktop)
+    +grid-container($desktop)
+
   .slick-next,
   .slick-prev
     background: rgba(255, 255, 255, .5)
@@ -58,3 +66,65 @@
 
   .slick-next
     right: .5rem
+
+#aboutCarousel
+  +grid-media($desktop)
+    margin-bottom: 2rem
+
+  .slick-list
+    +grid-column(6, $mobile)
+
+    +grid-media($desktop)
+      +grid-column(8, $desktop)
+      +grid-shift(2, $desktop)
+
+    img
+      width: 100%
+
+#aboutCarouselMenu
+  display: none
+  margin-bottom: 2rem
+
+  +grid-media($desktop)
+    display: flex
+
+    .slick-list
+      +grid-column(10, $desktop)
+
+    .slick-track
+      +grid-collapse($carousel-menu)
+
+    div.slick-slide
+      +grid-column(1, $carousel-menu)
+
+    .slick-next,
+    .slick-prev
+      +grid-media($desktop)
+        +grid-column(1, $desktop)
+        align-items: stretch
+        background: $highlight_color
+        border-radius: 0
+        display: flex
+        align-items: center
+        justify-content: center
+
+        svg
+          width: 1rem
+          height: 1rem
+          fill: white
+
+    .slick-next svg
+      transform: rotate(180deg)
+
+    .slick-slide
+      background: black
+
+      img
+        opacity: .55
+        width: 100%
+        display: block
+
+      &.slick-center
+        background: transparent
+        img
+          opacity: 1

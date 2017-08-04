@@ -5,7 +5,9 @@ $(document).ready(function(){
   $('.hamburger').click(hamburgerMenu);
 
   // carousel
-  $('#carousel').slick(carouselSettings);
+  $('#homeCarousel').slick(homeCarouselSettings);
+  $('#aboutCarousel').slick(aboutCarouselSettings);
+  $('#aboutCarouselMenu').slick(aboutCarouselMenuSettings);
 
   // services
   $('.card').each(shapeCard).flip();
@@ -25,10 +27,43 @@ var hamburgerMenu = function () {
     mobileMenu.find('ul').addClass('animated');
 };
 
-var carouselSettings = {
-  'dots': true,
-  'nextArrow': '<button type="button" class="slick-next">&gt;</button>',
-  'prevArrow': '<button type="button" class="slick-prev">&lt;</button>'
+var homeCarouselSettings = {
+  dots: true,
+  nextArrow: '<button type="button" class="slick-next">&gt;</button>',
+  prevArrow: '<button type="button" class="slick-prev">&lt;</button>'
+};
+
+var aboutCarouselSettings = {
+  arrows: false,
+  fade: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: '#aboutCarouselMenu',
+  nextArrow: '<button type="button" class="slick-next">&gt;</button>',
+  prevArrow: '<button type="button" class="slick-prev">&lt;</button>',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        fade: true
+      }
+    }
+  ]
+};
+
+var svgArrow = '<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><path fill="#FFF" d="M165 .6l-87 87L37.2 128 78 168.8l87 87 40.4-40.6-87-87 87-87"/></svg>';
+
+var aboutCarouselMenuSettings = {
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '#aboutCarousel',
+  arrows: true,
+  centerMode: true,
+  focusOnSelect: true,
+  nextArrow: '<div class="slick-next">' + svgArrow + '</div>',
+  prevArrow: '<div class="slick-prev">' + svgArrow + '</div>',
+  appendArrow: $('#abourCarouselMenu .slick-track')
 };
 
 var shapeCard = function () {
@@ -39,3 +74,4 @@ var shapeCard = function () {
   var cssBg = 'url(' + this.dataset.cover + ')';
   $(this).find('.front').css('background-image', cssBg);
 };
+
