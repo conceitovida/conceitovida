@@ -67,21 +67,16 @@ main.home
       +grid-column(10, $desktop)
       +grid-shift(1, $desktop)
       display: flex
-      justify-content: space-between
+      justify-content: space-around
 
   li
     +grid-column(4, $mobile)
     +grid-shift(1, $mobile)
-    margin-top: 1rem
-
-    &:first-child
-      margin-top: 0
 
     +grid-media($desktop)
-      width: 25%
-      margin: 0
       float: none
       position: initial
+      white-space: nowrap
 
   .name, .crm
     display: block
