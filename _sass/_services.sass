@@ -24,6 +24,7 @@ main.services
     height: 5rem
     padding: .2rem
     position: relative
+    z-index: 2
 
     +grid-media($desktop)
       font-size: 1.6rem
@@ -67,20 +68,34 @@ main.services
       box-shadow: 0 0 .5rem #ccc
 
     .front
-      background-size: cover
+      background-color: black
       justify-content: flex-end
+      position: relative
 
       +grid-media($desktop)
-        opacity: .8
 
-        &:hover
+        & > div
+          background-size: cover
+          border-radius: .5rem
+          height: 100%
+          left: 0
+          opacity: 0.4
+          position: absolute
+          top: 0
+          width: 100%
+          z-index: 1
+          transition: opacity .5s ease-out
+
+        &:hover > div
           opacity: 1
 
       p
         color: $highlight_color
+        cursor: pointer
         font-weight: bold
         text-align: right
         text-transform: uppercase
+        z-index: 2
 
     .back
       justify-content: center

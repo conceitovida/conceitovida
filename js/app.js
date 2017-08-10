@@ -72,6 +72,6 @@ var shapeCard = function () {
   $(this).resize(shapeCard);
 
   var cssBg = 'url(' + this.dataset.cover + ')';
-  $(this).find('.front').css('background-image', cssBg);
+  $(this).find('.front > div').css('background-image', cssBg);
 };
 
