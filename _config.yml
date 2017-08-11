@@ -1,6 +1,6 @@
 title: Conceito Vida
 tagline: Cirurgia Plástica & Longevidade
-url: "http://localhost:4000"
+url: "http://www.conceitovida.com.br"
 baseurl: ""
 
 exclude:
@@ -23,3 +23,5 @@ contact:
   phone: +551932540492
   phone_for_humans: (19) 3254.0492
   email: contato@conceitovida.com.br
+
+google-maps-api: AIzaSyBuZIsqrpOgm_fTUVfJ_zlGmhS8t4H07Xw
