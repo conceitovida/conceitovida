@@ -5,9 +5,9 @@
 _site/
 
 # bourbon family
-_sass/bourbon/
-_sass/neat/
-_sass/base/
+# _sass/bourbon/
+# _sass/neat/
+# _sass/base/
 
 # sass
 .sass-cache/
